@@ -2,8 +2,7 @@
 <html lang="ko">
 <head>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7917290817836430"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7917290817836430" crossorigin="anonymous"></script>
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,159 +11,189 @@
 <style>
 
 *{
-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 body{
-margin:0;
-font-family:Arial,"Noto Sans KR",sans-serif;
-background:#ffffff;
-color:#111827;
-line-height:1.7;
+  margin:0;
+  font-family:Arial,"Noto Sans KR",sans-serif;
+  background:#ffffff;
+  color:#111827;
+  line-height:1.7;
 }
 
 header{
-border-bottom:1px solid #e5e7eb;
-background:#ffffff;
-position:sticky;
-top:0;
-z-index:100;
+  border-bottom:1px solid #e5e7eb;
+  background:#ffffff;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
 .nav{
-max-width:1100px;
-margin:auto;
-padding:18px 24px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  max-width:1100px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
+  font-size:22px;
+  font-weight:700;
 }
 
 .menu a{
-margin-left:20px;
-text-decoration:none;
-color:#374151;
-font-size:15px;
+  margin-left:20px;
+  text-decoration:none;
+  color:#374151;
+  font-size:15px;
+}
+.menu a:hover{
+  color:#111827;
+  font-weight:600;
 }
 
 .hero{
-max-width:1100px;
-margin:auto;
-padding:100px 24px 80px;
-text-align:center;
+  max-width:1100px;
+  margin:auto;
+  padding:100px 24px 80px;
+  text-align:center;
 }
 
 .hero h1{
-font-size:48px;
-line-height:1.25;
-margin-bottom:20px;
-letter-spacing:-1px;
+  font-size:48px;
+  line-height:1.25;
+  margin-bottom:20px;
+  letter-spacing:-1px;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
-font-size:20px;
-color:#4b5563;
+  max-width:700px;
+  margin:auto;
+  font-size:20px;
+  color:#4b5563;
 }
 
 .button{
-display:inline-block;
-margin-top:32px;
-padding:14px 28px;
-background:#111827;
-color:#ffffff;
-text-decoration:none;
-border-radius:999px;
-font-weight:600;
+  display:inline-block;
+  margin-top:32px;
+  padding:14px 28px;
+  background:#111827;
+  color:#ffffff;
+  text-decoration:none;
+  border-radius:999px;
+  font-weight:600;
 }
 
 section{
-max-width:1100px;
-margin:auto;
-padding:70px 24px;
+  max-width:1100px;
+  margin:auto;
+  padding:70px 24px;
 }
 
 section h2{
-font-size:32px;
-margin-bottom:20px;
+  font-size:32px;
+  margin-bottom:20px;
 }
 
 .card-wrap{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:30px;
 }
 
 .card{
-background:#f9fafb;
-border:1px solid #e5e7eb;
-border-radius:20px;
-padding:26px;
+  background:#f9fafb;
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:26px;
+  display:flex;
+  flex-direction:column;
 }
 
 .card h3{
-margin-top:0;
-font-size:20px;
+  margin-top:0;
+  font-size:20px;
 }
 
 .card p{
-color:#4b5563;
+  color:#4b5563;
+  flex-grow:1;
+  font-size:15px;
+}
+
+.en-desc{
+  margin-top:12px;
+  color:#6b7280;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.privacy-link {
+  display:inline-block;
+  margin-top:15px;
+  font-size:14px;
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.privacy-link:hover {
+  text-decoration:underline;
 }
 
 .info-box{
-background:#f9fafb;
-border:1px solid #e5e7eb;
-border-radius:20px;
-padding:26px;
+  background:#f9fafb;
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:26px;
 }
 
 footer{
-border-top:1px solid #e5e7eb;
-padding:30px;
-text-align:center;
-font-size:14px;
-color:#6b7280;
+  border-top:1px solid #e5e7eb;
+  padding:40px 24px;
+  text-align:center;
+  font-size:14px;
+  color:#6b7280;
 }
 
-footer a{
-color:#374151;
-text-decoration:none;
+.footer-links {
+  margin-top: 15px;
+}
+
+.footer-links a{
+  color:#374151;
+  text-decoration:none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
 }
 
 @media(max-width:768px){
-
-.nav{
-display:block;
-text-align:center;
-}
-
-.menu{
-margin-top:14px;
-}
-
-.menu a{
-margin:0 8px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-.card-wrap{
-grid-template-columns:1fr;
-}
-
+  .nav{
+    display:block;
+    text-align:center;
+  }
+  .menu{
+    margin-top:14px;
+  }
+  .menu a{
+    margin:0 8px;
+  }
+  .hero h1{
+    font-size:34px;
+  }
+  .hero p{
+    font-size:17px;
+  }
+  .card-wrap{
+    grid-template-columns:1fr;
+  }
 }
 
 </style>
@@ -174,157 +203,100 @@ grid-template-columns:1fr;
 <body>
 
 <header>
-
-<div class="nav">
-
-<div class="logo">
-H&D Co., Ltd.
-</div>
-
-<nav class="menu">
-<a href="#about">About</a>
-<a href="#apps">Apps</a>
-<a href="#contact">Contact</a>
-<a href="privacy.html">Privacy Policy</a>
-</nav>
-
-</div>
-
+  <div class="nav">
+    <div class="logo">H&D Co., Ltd.</div>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#apps">Apps</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
 <section class="hero">
-
-<h1>
-Simple Mobile Productivity Experience
-</h1>
-
-<p>
-H&D Co., Ltd. develops mobile applications and digital services
-focused on productivity, convenience, and user experience.
-</p>
-
-<a class="button" href="#apps">
-View Our Apps
-</a>
-
+  <h1>Simple Mobile Productivity Experience</h1>
+  <p>
+    H&D Co., Ltd. develops mobile applications and digital services
+    focused on productivity, convenience, and user experience.
+  </p>
+  <a class="button" href="#apps">View Our Apps</a>
 </section>
 
 <section id="about">
-
-<h2>
-About
-</h2>
-
-<p>
-에이치엔디 주식회사는 모바일 애플리케이션과 디지털 서비스를 개발하는 회사입니다.
-사용자의 생산성과 편의성을 높이는 실용적인 서비스를 만드는 것을 목표로 합니다.
-</p>
-
+  <h2>About</h2>
+  <p>
+    에이치엔디 주식회사는 모바일 애플리케이션과 디지털 서비스를 개발하는 회사입니다.
+    사용자의 생산성과 편의성을 높이는 실용적인 서비스를 만드는 것을 목표로 합니다.
+  </p>
+  <div class="en-desc">
+    H&D Co., Ltd. is a company that develops mobile applications and digital services. Our goal is to create practical tools that enhance users' productivity and convenience.
+  </div>
 </section>
 
 <section id="apps">
+  <h2>Apps</h2>
+  <div class="card-wrap">
+    
+    <!-- 첫 번째 카드: Multi Ctrl+C.V (통합) -->
+    <div class="card">
+      <h3>Multi Ctrl+C.V</h3>
+      <p>
+        자주 사용하는 문장과 이미지를 저장한 뒤 필요할 때 간편하게 붙여넣기 할 수 있는 멀티 클립보드 애플리케이션입니다. 반복적인 입력 작업을 줄이고 생산성을 크게 향상시킵니다.
+        <div class="en-desc">
+          A multi-clipboard application that allows you to save frequently used text and images, and easily paste them when needed. It significantly reduces repetitive typing and boosts productivity.
+        </div>
+      </p>
+      <a class="privacy-link" href="privacy-multictrlcv.html">Privacy Policy ➔</a>
+    </div>
 
-<h2>
-Apps
-</h2>
+    <!-- 두 번째 카드: AlarmToDo (가운데 배치) -->
+    <div class="card">
+      <h3>AlarmToDo</h3>
+      <p>
+        알람, 할 일, 일정, 세계시간, 타이머 기능을 하나로 통합하여 사용자의 일상을 체계적으로 관리해 주는 스마트 생산성 애플리케이션입니다.
+        <div class="en-desc">
+          A smart productivity app that systematically manages your daily routine by integrating alarm, to-do list, schedule, world clock, and timer features into one platform.
+        </div>
+      </p>
+      <a class="privacy-link" href="privacy.html">Privacy Policy ➔</a>
+    </div>
 
-<div class="card-wrap">
+    <!-- 세 번째 카드: Upcoming Services -->
+    <div class="card">
+      <h3>Upcoming Services</h3>
+      <p>
+        사용자의 반복적인 작업을 줄이고 삶의 질을 향상시키는 모바일 유틸리티 서비스를 지속적으로 연구하고 개발 중입니다.
+        <div class="en-desc">
+          We are continuously researching and developing mobile utility services aimed at reducing repetitive tasks and improving your quality of life.
+        </div>
+      </p>
+    </div>
 
-<div class="card">
-
-<h3>
-Multi Ctrl CV
-</h3>
-
-<p>
-자주 사용하는 문장과 이미지를 저장한 뒤
-필요할 때 간편하게 붙여넣기 할 수 있는 모바일 애플리케이션입니다.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Clipboard Productivity
-</h3>
-
-<p>
-반복적인 입력 작업을 줄이고
-생산성을 향상시키는 기능을 제공합니다.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Mobile Utility Services
-</h3>
-
-<p>
-사용자 중심의 모바일 유틸리티 서비스를 개발하고 있습니다.
-</p>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <section id="contact">
-
-<h2>
-Contact
-</h2>
-
-<div class="info-box">
-
-<p>
-<strong>Company:</strong>
-H&D Co., Ltd.
-</p>
-
-<p>
-<strong>Business Registration Number:</strong>
-142-81-00128
-</p>
-
-<p>
-<strong>CEO:</strong>
-손영석
-</p>
-
-<p>
-<strong>Address:</strong>
-경기도 용인시 수지구 만현로 17-1(상현동, 4층)
-</p>
-
-<p>
-<strong>Email:</strong>
-support@hndsoft.com
-</p>
-
-</div>
-
+  <h2>Contact</h2>
+  <div class="info-box">
+    <p><strong>Company:</strong> H&D Co., Ltd.</p>
+    <p><strong>Business Registration Number:</strong> 142-81-00128</p>
+    <p><strong>CEO:</strong> 손영석 (Young-Seok Son)</p>
+    <p><strong>Address:</strong> 경기도 용인시 수지구 만현로 17-1 (상현동, 4층) <br><span class="en-desc" style="margin-top:0;">17-1, Manhyeon-ro, Suji-gu, Yongin-si, Gyeonggi-do, Republic of Korea</span></p>
+    <p><strong>Email:</strong> support@hndsoft.com</p>
+  </div>
 </section>
 
 </main>
 
 <footer>
-
-<p>
-© 2026 H&D Co., Ltd. All rights reserved.
-</p>
-
-<p>
-<a href="privacy.html">
-Privacy Policy
-</a>
-</p>
-
+  <p>© 2026 H&D Co., Ltd. All rights reserved.</p>
+  
+  <div class="footer-links">
+    <a href="privacy-multictrlcv.html">Privacy Policy (Multi Ctrl+C.V)</a> | 
+    <a href="privacy.html">Privacy Policy (AlarmToDo)</a>
+  </div>
 </footer>
 
 </body>
