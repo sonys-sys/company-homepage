@@ -50,6 +50,7 @@ header{
   color:#374151;
   font-size:15px;
 }
+
 .menu a:hover{
   color:#111827;
   font-weight:600;
@@ -132,16 +133,20 @@ section h2{
   line-height:1.6;
 }
 
-.privacy-link {
-  display:inline-block;
-  margin-top:15px;
+.privacy-links{
+  margin-top:18px;
+}
+
+.privacy-link{
+  display:block;
+  margin-top:8px;
   font-size:14px;
   color:#2563eb;
   text-decoration:none;
   font-weight:600;
 }
 
-.privacy-link:hover {
+.privacy-link:hover{
   text-decoration:underline;
 }
 
@@ -160,14 +165,15 @@ footer{
   color:#6b7280;
 }
 
-.footer-links {
-  margin-top: 15px;
+.footer-links{
+  margin-top:15px;
+  line-height:1.9;
 }
 
 .footer-links a{
   color:#374151;
   text-decoration:none;
-  margin: 0 10px;
+  margin:0 8px;
 }
 
 .footer-links a:hover{
@@ -179,18 +185,23 @@ footer{
     display:block;
     text-align:center;
   }
+
   .menu{
     margin-top:14px;
   }
+
   .menu a{
     margin:0 8px;
   }
+
   .hero h1{
     font-size:34px;
   }
+
   .hero p{
     font-size:17px;
   }
+
   .card-wrap{
     grid-template-columns:1fr;
   }
@@ -239,7 +250,7 @@ footer{
   <h2>Apps</h2>
   <div class="card-wrap">
     
-    <!-- 첫 번째 카드: Multi Ctrl+C.V (통합) -->
+    <!-- 첫 번째 카드: Multi Ctrl+C.V -->
     <div class="card">
       <h3>Multi Ctrl+C.V</h3>
       <p>
@@ -248,10 +259,14 @@ footer{
           A multi-clipboard application that allows you to save frequently used text and images, and easily paste them when needed. It significantly reduces repetitive typing and boosts productivity.
         </div>
       </p>
-      <a class="privacy-link" href="privacy-multictrlcv.html">Privacy Policy ➔</a>
+
+      <div class="privacy-links">
+        <a class="privacy-link" href="privacy-multictrlcv.html">Privacy Policy (Android) ➔</a>
+        <a class="privacy-link" href="multictrlcv-privacy-ios/">Privacy Policy (iOS) ➔</a>
+      </div>
     </div>
 
-    <!-- 두 번째 카드: AlarmToDo (가운데 배치) -->
+    <!-- 두 번째 카드: AlarmToDo -->
     <div class="card">
       <h3>AlarmToDo</h3>
       <p>
@@ -260,7 +275,11 @@ footer{
           A smart productivity app that systematically manages your daily routine by integrating alarm, to-do list, schedule, world clock, and timer features into one platform.
         </div>
       </p>
-      <a class="privacy-link" href="privacy.html">Privacy Policy ➔</a>
+
+      <div class="privacy-links">
+        <a class="privacy-link" href="privacy.html">Privacy Policy (Android) ➔</a>
+        <a class="privacy-link" href="alarmtodo-privacy-ios/">Privacy Policy (iOS) ➔</a>
+      </div>
     </div>
 
     <!-- 세 번째 카드: Upcoming Services -->
@@ -283,7 +302,13 @@ footer{
     <p><strong>Company:</strong> H&D Co., Ltd.</p>
     <p><strong>Business Registration Number:</strong> 142-81-00128</p>
     <p><strong>CEO:</strong> 손영석 (Young-Seok Son)</p>
-    <p><strong>Address:</strong> 경기도 용인시 수지구 만현로 17-1 (상현동, 4층) <br><span class="en-desc" style="margin-top:0;">17-1, Manhyeon-ro, Suji-gu, Yongin-si, Gyeonggi-do, Republic of Korea</span></p>
+    <p>
+      <strong>Address:</strong> 경기도 용인시 수지구 만현로 17-1 (상현동, 4층)
+      <br>
+      <span class="en-desc" style="margin-top:0;">
+        17-1, Manhyeon-ro, Suji-gu, Yongin-si, Gyeonggi-do, Republic of Korea
+      </span>
+    </p>
     <p><strong>Email:</strong> support@hndsoft.com</p>
   </div>
 </section>
@@ -294,8 +319,11 @@ footer{
   <p>© 2026 H&D Co., Ltd. All rights reserved.</p>
   
   <div class="footer-links">
-    <a href="privacy-multictrlcv.html">Privacy Policy (Multi Ctrl+C.V)</a> | 
-    <a href="privacy.html">Privacy Policy (AlarmToDo)</a>
+    <a href="privacy-multictrlcv.html">Multi Ctrl+C.V Privacy Policy (Android)</a> |
+    <a href="multictrlcv-privacy-ios/">Multi Ctrl+C.V Privacy Policy (iOS)</a>
+    <br>
+    <a href="privacy.html">AlarmToDo Privacy Policy (Android)</a> |
+    <a href="alarmtodo-privacy-ios/">AlarmToDo Privacy Policy (iOS)</a>
   </div>
 </footer>
 
