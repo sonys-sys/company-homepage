@@ -1,3 +1,114 @@
+Conversation Log
+심사 제출할 때 개인정보처리방침 관련 수정할 내용이 있는지 알려줘.
+
+네, 이번에 Firebase Analytics 연동 및 Google Ads 연결을 진행하셨기 때문에, 기존 개인정보처리방침(Privacy Policy)을 그대로 두시면 애플 앱스토어 심사에서 "개인정보처리방침과 앱의 실제 데이터 수집 동작 불일치"로 거절(Reject)될 위험이 있습니다.
+
+프로젝트 내 PRIVACY_POLICY.md 문서를 정밀 검토한 결과와 수정/추가해야 할 핵심 내용을 정리해 드립니다.
+
+🚨 1. 반드시 수정해야 하는 이유 (기존 문서와의 충돌)
+
+현재 PRIVACY_POLICY.md의 1번 항목에 다음과 같은 문구가 있습니다:
+
+"We DO NOT collect, store, or transmit any personal information, clipboard data, or usage statistics to external servers."
+
+문제점: 이번에 Firebase Analytics를 추가함에 따라 **앱 설치(first_open), 실행 세션, 앱 사용 이벤트(usage statistics)**가 구글 파이어베이스 서버로 전송됩니다.
+문서에는 "사용 통계를 외부 서버로 절대 보내지 않는다"고 적혀 있는데, 실제 앱에는 Analytics SDK가 탑재되어 있고 앱스토어 커넥트 '앱 개인정보' 설문에도 데이터를 수집한다고 체크하게 되므로 허위 기재/진술 불일치로 100% 심사 반려 대상이 됩니다.
+✍️ 2. 구체적인 수정 및 추가 내용
+
+개인정보처리방침이 게시되어 있는 웹페이지(노션, 깃허브 페이지, 웹사이트 등) 및 프로젝트 내 문서에 아래 내용을 반영해 주셔야 합니다.
+
+① [수정] 1번 항목 (Information Collection and Use)
+
+클립보드 데이터와 텍스트는 수집하지 않지만, 앱 안정성 및 통계 분석을 위해 익명 데이터가 수집될 수 있음을 명시합니다.
+
+이어서 상세히 안내해 드립니다.
+
+개인정보처리방침이 게시되어 있는 웹페이지(노션, 깃허브 페이지, 웹사이트 등) 및 프로젝트 문서에 반영하셔야 할 구체적인 수정 내용입니다.
+
+✍️ 1. 수정 및 추가해야 할 3가지 핵심 내용
+① [수정]
+
+개인정보처리방침에서 수정/추가하셔야 할 핵심 3가지를 정리해 드립니다.
+
+1. 수정해야 할 핵심 3가지
+제3자 서비스 목록에 Firebase Analytics 추가
+기존: Google AdMob만 명시되어 있음.
+수정: **Google Analytics for Firebase (Firebase Analytics)**를 반드시 추가해야 합니다.
+수집 데이터 항목 수정
+기존: "어
+
+개인정보처리방침 웹페이지(노션/웹사이트 등)에 반드시 수정/추가해야 할 핵심 2가지입니다.
+
+1. 수정해야 할 핵심 내용
+① 1번 항목 (Information Collection and Use) 수정
+기존: 사용 통계(usage statistics)를 외부로 전송하지 않는다고 되어 있음.
+수정: 클립보드 텍스트나 민감 정보는 절대 저장/수집하지 않지만, 앱 성능 분석 및 개선을 위해 비식별화된 사용 통계와 기기 정보(Firebase Analytics)가 수집될 수 있음을 명시해야 심사 거절을 피할 수 있습니다.
+② 4번 항목 (Third-Party Services) 추가
+기존
+
+심사 제출 시 개인정보처리방침(Privacy Policy)에서 수정하셔야 할 사항은 2가지입니다.
+
+1. 수정해야 할 핵심 사항
+**제3자 서비스(
+
+개인정보처리방침에서 수정해야 할 내용은 2가지입니다.
+
+핵심 수정 사항 2가지
+
+제3자 서비스 목록에 Firebase Analytics 추가
+
+기존: Google AdMob만 기재되어 있음
+변경: Google Analytics for Firebase 추가 및 개인정보 보호정책 링크 기재
+
+수집 항목 문구 정정
+
+기존: "사용 통계(usage statistics)를 외부로 절대 전송하지 않는다"고 적혀 있음
+변경: "클립보드 내용과 개인정보는 일체 수집하지 않으나, 서비스 개선 및 통계 분석을 위해 비식별 사용 데이터(Firebase Analytics)가 수집될 수 있다"로 수정
+
+참고: 앱스토어 커넥트에 등록하신 **개인정보처리방침 웹 링크(노션, 웹페이지 등)**에도 위 내용을 동일하게 업데이트해 주셔야 심사 거절을 방지할 수 있습니다.
+
+오후 4:46
+프로젝트 루트 디렉토리에 있는 `PRIVACY_POLICY.md` 파일을 열어 다음 내용으로 수정해 줘.
+
+1. "We DO NOT collect, store, or transmit any personal information, clipboard data, or usage statistics to external servers." 문구를 수정하여, 클립보드 데이터나 개인정보는 절대 수집하지 않지만, 앱 성능 분석 및 통계 목적의 비식별화된 사용 데이터(Firebase Analytics)는 수집될 수 있음을 명시해 줘.
+2. 제3자 서비스(Third-Party Services) 항목에 'Google Analytics for Firebase'를 추가해 줘.
+
+수정이 완료되면 변경된 `PRIVACY_POLICY.md` 전체 내용을 보여줘.
+
+요청하신 내용을 반영하여 PRIVACY_POLICY.md 파일 수정을 완료했습니다.
+
+📄 수정된 PRIVACY_POLICY.md 전체 내용
+markdown
+# Privacy Policy for Multi Ctrl+C.V
+**Effective Date:** October 1, 2026
+SONYS ("we", "our", or "us") operates the Multi Ctrl+C.V mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our App.
+## 1. Information Collection and Use
+We **DO NOT** collect, store, or transmit any personal information or clipboard data to external servers. All clipboard data and user-created text processing occurs strictly locally on your device. 
+However, to maintain app stability, improve user experience, and analyze performance, we may collect anonymous, non-personally identifiable usage statistics and diagnostics through third-party analytics services (Google Analytics for Firebase).
+## 2. Accessibility Service API
+Multi Ctrl+C.V uses the **AccessibilityService API** for the sole purpose of providing the "Auto-Paste" functionality. 
+- **What we do:** We detect when the user focuses on an input field and automatically insert the text or image previously selected by the user within the App.
+- **What we DON'T do:** We do not collect or monitor any text typed by the user, passwords, credit card numbers, or any other sensitive information. We do not share any data accessed via the AccessibilityService API with third parties.
+## 3. Permissions
+- **Accessibility Service:** Required for the auto-paste feature.
+- **Overlay Permission:** Required to display the floating rainbow toolbar over other apps.
+- **Storage Permission:** Required only for detecting screenshots/media to enable certain clipboard features (optional).
+## 4. Third-Party Services
+The App uses third-party services that may collect information used to identify your device or analyze performance:
+- **Google AdMob:** Used to display advertisements and deliver personalized or contextual ads.
+- **Google Analytics for Firebase:** Used to collect aggregated, anonymous usage data and track installation events to measure app performance and stability.
+Please refer to [Google's Privacy Policy](https://policies.google.com/privacy) for more details on how Google handles collected data.
+## 5. Security
+We value your trust in providing us with the necessary permissions. All your sensitive clipboard data remains securely on your device, ensuring privacy by design.
+## 6. Contact Us
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: **sonys_dev@example.com** (Placeholder address, please update).
+---
+© 2026 SONYS. All rights reserved.
+
+💡 안내 사항:
+앱스토어 커넥트(App Store Connect)의 앱 정보란에 등록되어 있는 **온라인 개인정보처리방침 웹페이지(노션, 깃허브 페이지, 웹사이트 등)**에도 위 수정된 내용을 복사하여 동일하게 업데이트해 주시면 심사 시 데이터 불일치로 인한 반려를 완벽하게 예방할 수 있습니다.
+
+오후 4:55
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -535,3 +646,98 @@
   </main>
 </body>
 </html>
+
+
+위의 기존 개인 정보 처리 방침을 수정해서 복사, 붙여넣기 할 수 있도록 생성해줘.
+
+제공해주신 HTML 구조와 스타일을 그대로 유지하면서, Firebase Analytics 연동, Google Ads 설치 전환 측정, 비식별 사용 통계 수집 항목을 한국어와 영어 양쪽에 완벽하게 반영한 최신 버전 HTML 코드입니다.
+
+그대로 복사하여 기존 웹페이지 파일에 덮어씌워 사용하실 수 있습니다.
+
+html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi Ctrl+C.V iOS 개인정보처리방침 | H&amp;D Co., Ltd.</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif;
+      line-height: 1.75;
+
+제공해주신 HTML 템플릿과 디자인을 그대로 유지하면서, Firebase Analytics 연동, Google Ads 설치 전환 측정, 비식별 사용 통계 수집, ATT 정책 안내를 한국어와 영어 양쪽에 완벽하게 반영한 최신 버전 HTML 파일을 프로젝트 루트에 바로 저장해 두었습니다.
+
+📁 생성된 파일 위치:
+privacy_policy.html
+
+🔍 주요 반영 및 보강 내용 요약
+제3자 서비스 목록에 Firebase Analytics 추가 (한국어 5.2 / 영문 5.2)
+Google Analytics for Firebase 항목을 신설하여, 클립보드 데이터나 민감한 개인정보는 일체 수집하지 않으며 오직 앱 실행/세션 및 비식별 통계만 수집함을 명시.
+수집 정보 및 이용 목적 보강 (1.4항 및 2항)
+앱 최초 실행(first_open), 기기 모델, OS 버전 등 광고 성과 측정(설치 전환) 및 앱 안정성 분석 목적 명시.
+클립보드 및 로컬 데이터 원칙 강조 (3항)
+클립보드와 텍스트/이미지 슬롯 데이터는 오직 사용자의 기기 내부에만 로컬 저장되며 외부 서버로 전송되지 않는다는 점을 명확히 하여 심사 통과 요건 충족.
+ATT (추적 권한) 안내 보강 (6항)
+추적 권한을 거부하더라도 앱의 핵심 기능(클립보드 복사/붙여넣기)은 정상 동작함을 안내.
+시행일 갱신
+시행일을 2026년 10월 1일 (최신 개정)로 업데이트.
+📋 바로 복사하여 사용하는 방법
+
+위 링크의 privacy_policy.html 파일을 열어 **전체 선택(Ctrl+A 또는 Cmd+A) 후 복사(Ctrl+C 또는 Cmd+C)**하셔서, 현재 호스팅 중인 웹페이지(GitHub Pages, 웹 서버 등)에 그대로 덮어씌우시면 됩니다.
+
+오후 5:14
+      </p>
+      <p>
+        H&amp;D Co., Ltd.는 사용자의 개인정보와 데이터를 중요하게 생각하며,
+        본 방침을 통해 앱에서 수집 또는 처리될 수 있는 정보, 이용 목적,
+        제3자 서비스 이용 현황 및 사용자의 선택권을 안내합니다.
+      </p>
+    </div>
+    <span class="lang-label">Korean Version</span>
+    <h2>1. 수집 또는 처리될 수 있는 정보</h2>
+    <p>
+      Multi Ctrl+C.V는 사용자가 자주 사용하는 텍스트와 이미지를 저장하고,
+      필요할 때 다시 붙여넣을 수 있도록 돕는 멀티 클립보드 애플리케이션입니다.
+      앱 기능 제공, 광고, 구독 기능 제공 및 서비스 분석을 위해 다음과 같은 정보가 수집 또는
+      처리될 수 있습니다.
+    </p>
+    <h3>1.1 앱 기능 이용 정보</h3>
+    <ul>
+      <li>사용자가 앱에 직접 저장한 텍스트 슬롯 데이터 (로컬 기기 내 저장)</li>
+      <li>사용자가 앱에 직접 저장한 이미지 슬롯 데이터 (로컬 기기 내 저장)</li>
+      <li>사용자가 직접 선택하거나 공유한 이미지 정보</li>
+      <li>사용자가 앱 기능을 통해 관리하는 클립보드 관련 데이터</li>
+      <li>슬롯 표시, 복사, 붙여넣기 기능 이용 정보</li>
+    </ul>
+    <h3>1.2 사진 및 이미지 관련 정보</h3>
+    <ul>
+      <li>사용자가 iOS 사진 선택 기능 또는 시스템 공유 기능을 통해 직접 선택한 이미지</li>
+      <li>사용자가 앱에 저장하도록 명시적으로 선택한 이미지 데이터</li>
+      <li>앱 화면에서 슬롯 표시 및 붙여넣기 기능 제공을 위해 필요한 이미지 캐시 정보</li>
+    </ul>
+    <h3>1.3 광고 및 구독 관련 정보</h3>
+    <ul>
+      <li>광고 식별자, IDFA 등 광고 관련 식별 정보 (사용자 추적 허용 시)</li>
+      <li>기기 정보 (모델, OS 버전 등)</li>
+      <li>광고 시청 및 광고 상호작용 정보</li>
+      <li>Apple 인앱결제를 통한 구독 및 결제 상태 정보</li>
+      <li>광고 제거 또는 프리미엄 기능 제공 여부 확인 정보</li>
+    </ul>
+    <h3>1.4 앱 통계 분석 및 안정성 정보 (Google Analytics for Firebase)</h3>
+    <ul>
+      <li>기기 모델, OS 버전, 언어 및 국가 설정 등 기본 기기 정보</li>
+      <li>앱 최초 실행(first_open), 실행 세션, 화면 조회 등 비식별 사용 통계</li>
+      <li>광고 캠페인 성과 측정 및 설치 전환 분석 데이터</li>
+      <li>앱 실행 및 사용 중 발생할 수 있는 비식별 오류 및 진단 정보</li>
+    </ul>
+    <h2>2. 정보의 이용 목적</h2>
+    <p>Multi Ctrl+C.V는 수집 또는 처리되는 정보를 다음 목적을 위해 사용합니다.</p>
+    <ul>
+      <li>텍스트 및 이미지 슬롯 저장 기능 제공</li>
+      <li>사용자가 선택한 텍스트 또는 이미지를 다시 복사하거나 붙여넣는 기능 제공</li>
