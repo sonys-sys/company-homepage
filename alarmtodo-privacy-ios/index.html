@@ -197,7 +197,7 @@
 
     <p>
       사용자가 선택하거나 녹음한 음원, 알람·일정·할일의 제목과 내용 및 알람
-      시간은 Google AdMob 또는 Nager.Date에 제공되지 않습니다.
+      시간은 Google AdMob, Google Ads, Firebase Analytics 또는 Nager.Date에 제공되지 않습니다.
     </p>
 
     <p>
@@ -236,6 +236,10 @@
         사용자가 기기의 음악 중 알람음으로 사용할 수 있는 음원을 직접 선택하는
         경우에만 사용합니다.
       </li>
+      <li>
+        <strong>앱 추적 투명성(ATT) 권한:</strong>
+        광고 성과 측정(앱 설치 전환 추적) 및 맞춤형 광고 제공을 위해 iOS 정책에 따라 사용자의 추적 허용 여부를 요청합니다.
+      </li>
     </ul>
 
     <p>
@@ -256,27 +260,24 @@
       경우에는 iOS 문서 선택 화면만 사용합니다.
     </p>
 
-    <h2>2. 광고 및 분석 과정에서 처리될 수 있는 정보</h2>
+    <h2>2. 광고, 분석 및 전환 측정 과정에서 처리될 수 있는 정보</h2>
 
     <p>
-      AlarmToDo는 일반 광고와 리워드 광고를 제공하기 위해 Google AdMob을
-      사용합니다. Google Mobile Ads SDK 및 관련 동의 관리 서비스는 앱 설정,
-      사용자의 동의 선택, 적용 법률 및 기기 설정에 따라 다음 정보를 처리할 수
-      있습니다.
+      AlarmToDo는 광고 제공, 리워드 광고 제공, 그리고 Firebase Analytics 및 Google Ads를 통한 앱 설치(`first_open`) 성과 측정을 위해 관련 SDK를 사용합니다. 
+      이에 따라 앱 설정, 사용자의 동의 선택, 적용 법률 및 기기 설정에 따라 다음 정보가 처리될 수 있습니다.
     </p>
 
     <ul>
       <li>IP 주소 등을 통해 추정되는 대략적 위치</li>
-      <li>기기 식별자 및 광고 관련 식별 정보</li>
+      <li>기기 식별자 및 광고 식별자(IDFA 등)</li>
       <li>광고 노출, 클릭, 시청 및 기타 광고 데이터</li>
-      <li>앱 실행, 화면 또는 광고와의 상호작용 등 제품 상호작용 정보</li>
+      <li>앱 설치(`first_open`), 화면 조회 등 제품 상호작용 및 이벤트 정보</li>
       <li>기기 종류, 운영체제 버전 등 기기 및 앱 정보</li>
       <li>충돌 데이터, 성능 데이터 및 기타 진단 데이터</li>
     </ul>
 
     <p>
-      AlarmToDo는 GPS 또는 정확한 위치 권한을 요청하지 않습니다. 광고
-      서비스에서 처리될 수 있는 대략적 위치는 IP 주소 등 네트워크 정보를
+      AlarmToDo는 GPS 또는 정확한 위치 권한을 요청하지 않습니다. 서비스에서 처리될 수 있는 대략적 위치는 IP 주소 등 네트워크 정보를
       기반으로 추정될 수 있습니다.
     </p>
 
@@ -284,17 +285,18 @@
 
     <ul>
       <li>일반 광고 및 리워드 광고 제공</li>
+      <li>Google Ads를 통한 광고 성과 및 앱 설치(`first_open`) 전환 측정</li>
+      <li>Firebase Analytics를 통한 앱 이용 통계 및 서비스 개선</li>
       <li>광고 노출 횟수 관리와 리워드 지급 확인</li>
-      <li>부정 이용 방지, 보안 및 광고 측정</li>
-      <li>서비스 성능 분석과 오류 진단</li>
-      <li>관련 법률 및 사용자의 선택에 따른 광고 제공</li>
+      <li>부정 이용 방지, 보안 유지 및 오류 진단</li>
+      <li>관련 법률 및 사용자의 선택에 따른 맞춤형 서비스 제공</li>
     </ul>
 
     <p>
-      Google Mobile Ads SDK의 개인정보 공개 정보에 따르면 일부 기기 식별자,
-      광고 데이터, 제품 상호작용 및 대략적 위치는 광고 또는 분석 목적으로
+      SDK의 데이터 공개 정보에 따르면 일부 기기 식별자,
+      광고 데이터, 제품 상호작용 및 대략적 위치는 광고, 분석 또는 추적 목적으로
       사용자나 기기와 연결되어 처리될 수 있습니다. 실제 처리 범위는 사용자의
-      지역, 동의 상태, 기기 설정 및 광고 구성에 따라 달라질 수 있습니다.
+      지역, 동의 상태, 기기 설정 및 구성에 따라 달라질 수 있습니다.
     </p>
 
     <h2>3. 구독 및 결제 정보</h2>
@@ -317,13 +319,11 @@
 
     <h2>4. 제3자 서비스</h2>
 
-    <h3>4.1 Google AdMob 및 User Messaging Platform</h3>
+    <h3>4.1 Google AdMob, Firebase Analytics 및 Google Ads</h3>
 
     <p>
-      AlarmToDo는 광고 제공과 광고 관련 개인정보 선택 관리를 위해 Google
-      AdMob 및 Google User Messaging Platform(UMP)을 사용합니다. UMP는 필요한
-      지역에서 광고 관련 동의 또는 개인정보 선택 화면을 표시하고 그 선택
-      상태를 처리할 수 있습니다.
+      AlarmToDo는 광고 제공을 위해 Google AdMob, 광고 성과 및 앱 설치(`first_open`) 분석을 위해 Google Ads 및 Firebase Analytics, 그리고 개인정보 선택 관리를 위해 Google UMP(User Messaging Platform)를 사용합니다. 
+      필요한 지역에서 UMP는 동의 화면을 표시하고 그 선택 상태를 처리할 수 있습니다.
     </p>
 
     <p>Google의 데이터 처리에 관한 자세한 내용은 다음 문서를 참고하십시오.</p>
@@ -361,9 +361,11 @@
     <h3>4.2 Apple 인앱결제 및 iOS 서비스</h3>
 
     <p>
-      구독 구매, 갱신, 만료, 취소 및 복원은 Apple의 인앱결제 시스템을 통해
-      처리됩니다. iOS 알림, AlarmKit, 미디어 보관함, 문서 선택 및 기기 백업과
-      같은 Apple 서비스에는 Apple의 개인정보 보호 정책이 적용됩니다.
+      Subscription purchases, renewals, expirations, cancellations, and
+      restorations are processed through Apple's In-App Purchase system.
+      Apple's privacy practices also apply to Apple services such as iOS
+      notifications, AlarmKit, the media library, document selection, and
+      device backups.
     </p>
 
     <p>
@@ -416,33 +418,25 @@
       을 참고하십시오.
     </p>
 
-    <h2>5. 광고 동의, 추적 및 사용자의 선택권</h2>
+    <h2>5. 광고 동의, 앱 추적 투명성(ATT) 및 사용자의 선택권</h2>
 
     <p>
-      AlarmToDo는 현재 Apple의 앱 추적 투명성(App Tracking Transparency)
-      권한을 직접 요청하지 않습니다. H&amp;D Co., Ltd.는 자체적으로 IDFA에
-      접근하거나 앱에서 생성된 알람·일정·할일 데이터를 다른 회사의 앱 또는
-      웹사이트 데이터와 결합하여 사용자를 추적하지 않습니다.
+      AlarmToDo는 Apple의 앱 추적 투명성(App Tracking Transparency, ATT) 프레임워크에 따라, 광고 성과 측정(`first_open`) 및 맞춤형 광고 제공을 위해 사용자에게 추적 권한 승인을 요청합니다. 
+      사용자가 추적을 허용하지 않더라도 앱의 기본 기능은 정상적으로 이용할 수 있습니다.
     </p>
 
     <p>
-      다만 Google Mobile Ads SDK의 개인정보 공개 정보에는 기기 식별자가
-      광고·분석 및 추적 목적으로 사용될 수 있는 데이터 유형으로 포함되어
-      있습니다. Google에 의한 실제 처리 여부와 범위는 사용자의 동의, 지역,
-      iOS 개인정보 설정 및 광고 구성에 따라 달라질 수 있습니다.
+      Google Mobile Ads SDK 및 Firebase SDK는 광고, 분석 및 전환 측정 목적으로 기기 식별자(IDFA 등)를 활용할 수 있습니다. 
+      실제 처리 범위는 사용자의 ATT 동의 여부, 지역, iOS 개인정보 설정 및 광고 구성에 따라 달라집니다.
     </p>
 
     <p>
       광고 개인정보 동의가 필요한 지역에서는 UMP 동의 화면이 제공될 수
-      있습니다. 동의하지 않은 경우 또는 관련 법률과 플랫폼 정책상 필요한
-      경우 비개인화 광고나 제한된 광고가 제공될 수 있으며, 광고가 제한되거나
-      표시되지 않을 수도 있습니다.
+      있습니다. 동의하지 않은 경우 비개인화 광고나 제한된 광고가 제공될 수 있습니다.
     </p>
 
     <p>
-      개인정보 옵션이 제공되는 지역의 사용자는 앱 설정의 개인정보 옵션을
-      통해 광고 관련 선택을 다시 확인하거나 변경할 수 있습니다. 사용자는
-      iOS 설정에서도 앱 권한과 Apple의 광고 개인화 설정을 관리할 수 있습니다.
+      사용자는 언제든지 iOS [설정]에서 앱의 추적 권한 및 광고 개인화 설정을 변경하거나 철회할 수 있습니다.
     </p>
 
     <h2>6. 데이터 보관 및 삭제</h2>
@@ -481,7 +475,7 @@
 
     <p>
       H&amp;D Co., Ltd.는 사용자의 개인정보를 판매하지 않습니다. 다만 광고,
-      동의 관리, 구독, 결제 및 공휴일 정보 제공을 위해 Google, Apple 및
+      전환 측정, 분석, 동의 관리, 구독, 결제 및 공휴일 정보 제공을 위해 Google, Apple 및
       Nager.Date가 필요한 범위에서 정보를 처리할 수 있습니다.
     </p>
 
@@ -571,8 +565,7 @@
 
       <p>
         Audio selected or recorded by the user, alarm, schedule or to-do titles
-        and content, and alarm times are not provided to Google AdMob or
-        Nager.Date.
+        and content, and alarm times are not provided to Google AdMob, Google Ads, Firebase Analytics, or Nager.Date.
       </p>
 
       <p>
@@ -612,6 +605,10 @@
           Used only when the user chooses compatible audio from the device for
           use as an alarm sound.
         </li>
+        <li>
+          <strong>App Tracking Transparency (ATT) permission:</strong>
+          Requested in accordance with iOS guidelines to measure ad performance (app install conversion tracking) and provide personalized ads.
+        </li>
       </ul>
 
       <p>
@@ -632,20 +629,19 @@
         backup file, the app uses only the iOS document picker.
       </p>
 
-      <h2>2. Information That May Be Processed for Advertising and Analytics</h2>
+      <h2>2. Information That May Be Processed for Advertising, Analytics, and Conversion Measurement</h2>
 
       <p>
-        AlarmToDo uses Google AdMob to provide advertisements and rewarded ads.
+        AlarmToDo uses Google AdMob for ads, and Firebase Analytics and Google Ads to measure app installation (`first_open`) performance and analytics.
         Depending on app configuration, user consent, applicable law, and device
-        settings, the Google Mobile Ads SDK and related consent services may
-        process:
+        settings, the associated SDKs may process:
       </p>
 
       <ul>
         <li>Approximate location inferred from an IP address</li>
-        <li>Device identifiers and advertising-related identifiers</li>
+        <li>Device identifiers and advertising-related identifiers (IDFA, etc.)</li>
         <li>Ad impressions, clicks, views, and other advertising data</li>
-        <li>Product interactions such as app, screen, or ad interactions</li>
+        <li>Product interactions such as app installations (`first_open`), screen views, or ad interactions</li>
         <li>Device and app information such as device type and iOS version</li>
         <li>Crash data, performance data, and other diagnostic data</li>
       </ul>
@@ -660,26 +656,26 @@
 
       <ul>
         <li>Provide advertisements and rewarded ads</li>
+        <li>Measure ad performance and app install (`first_open`) conversions via Google Ads</li>
+        <li>Analyze app usage and improve services via Firebase Analytics</li>
         <li>Manage ad frequency and verify reward delivery</li>
-        <li>Prevent fraud, provide security, and measure advertising</li>
-        <li>Analyze service performance and diagnose errors</li>
-        <li>Provide ads in accordance with applicable law and user choices</li>
+        <li>Prevent fraud, provide security, and diagnose errors</li>
+        <li>Provide personalized services in accordance with applicable law and user choices</li>
       </ul>
 
       <p>
-        According to the Google Mobile Ads SDK data disclosure, certain device
+        According to SDK data disclosures, certain device
         identifiers, advertising data, product interactions, and approximate
         location may be processed in a manner linked to a user or device for
-        advertising or analytics purposes. Actual processing may vary depending
-        on the user's region, consent status, device settings, and advertising
-        configuration.
+        advertising, analytics, or tracking purposes. Actual processing may vary depending
+        on the user's region, consent status, device settings, and configuration.
       </p>
 
       <h2>3. Subscription and Purchase Information</h2>
 
       <p>
         Subscriptions and payments are processed through Apple In-App Purchase.
-        H&amp;D Co., Ltd. does not collect credit card numbers, bank account
+        H&amp;D Co., Ltd. does not credit card numbers, bank account
         numbers, or other direct payment information.
       </p>
 
@@ -697,11 +693,11 @@
 
       <h2>4. Third-Party Services</h2>
 
-      <h3>4.1 Google AdMob and User Messaging Platform</h3>
+      <h3>4.1 Google AdMob, Firebase Analytics, and Google Ads</h3>
 
       <p>
-        AlarmToDo uses Google AdMob to provide ads and Google User Messaging
-        Platform (UMP) to manage advertising privacy choices. Where required,
+        AlarmToDo uses Google AdMob for ads, Google Ads and Firebase Analytics for conversion measurement and analytics, and Google User
+        Messaging Platform (UMP) to manage advertising privacy choices. Where required,
         UMP may display a consent or privacy choices message and process the
         resulting choice status.
       </p>
@@ -798,36 +794,25 @@
         </a>.
       </p>
 
-      <h2>5. Advertising Consent, Tracking, and User Choices</h2>
+      <h2>5. Advertising Consent, App Tracking Transparency (ATT), and User Choices</h2>
 
       <p>
-        AlarmToDo currently does not directly request permission under Apple's
-        App Tracking Transparency framework. H&amp;D Co., Ltd. does not
-        independently access IDFA or combine alarm, schedule, or to-do data
-        generated in the app with data from other companies' apps or websites
-        to track users.
+        AlarmToDo requests permission under Apple's App Tracking Transparency (ATT) framework to measure ad performance (`first_open`) and provide personalized ads. 
+        Users can still use all core features of the app even if tracking permission is declined.
       </p>
 
       <p>
-        However, the Google Mobile Ads SDK data disclosure identifies device
-        identifiers as a data type that may be used for advertising, analytics,
-        and tracking. Whether and how Google processes this information may
-        vary depending on user consent, region, iOS privacy settings, and
-        advertising configuration.
+        The Google Mobile Ads SDK and Firebase SDK may utilize device identifiers (such as IDFA) for advertising, analytics, and conversion measurement purposes. 
+        Whether and how this information is processed depends on the user's ATT consent status, region, iOS privacy settings, and configuration.
       </p>
 
       <p>
         In regions where advertising privacy consent is required, a UMP consent
-        message may be provided. If consent is not given, or where required by
-        law or platform policy, non-personalized or limited ads may be served,
-        or ads may be restricted or unavailable.
+        message may be provided. If consent is not given, non-personalized or limited ads may be served.
       </p>
 
       <p>
-        Where available, users may review or change advertising privacy choices
-        through the privacy options in the app's settings. Users may also
-        manage app permissions and Apple's advertising personalization settings
-        in iOS Settings.
+        Users can review or change tracking permissions and advertising personalization settings at any time in iOS Settings.
       </p>
 
       <h2>6. Data Retention and Deletion</h2>
@@ -869,7 +854,7 @@
       <p>
         H&amp;D Co., Ltd. does not sell user personal information. Google,
         Apple, and Nager.Date may process information as necessary to provide
-        advertising, consent management, subscription, payment, and holiday
+        advertising, conversion measurement, analytics, consent management, subscription, payment, and holiday
         information features.
       </p>
 
